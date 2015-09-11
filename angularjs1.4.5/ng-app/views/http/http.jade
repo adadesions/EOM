@@ -1,0 +1,26 @@
+extends ../layout
+block content
+  .app-header
+    h1 Angular-$http
+  .my-app(ng-app='adaApp' ng-controller='httpCtrl')
+    h2 Get data from a json or DB
+    p Now we're using a dataset from our json document.
+    table(ng-show='agree').table.table-stripe
+      tr
+        th No
+        th Name
+        th City
+        th Country
+      tr(ng-repeat='x in data')
+        td {{$index+1}}
+        td {{x.Name}}
+        td {{x.City}}
+        td {{x.Country}}
+    .col-lg-4
+    .col-lg-4
+      .checkbox
+        input(type='checkbox' ng-model='agree') 
+        h4 Do you agree with AdaCode.io?
+    .col-lg-4  
+    br
+    br

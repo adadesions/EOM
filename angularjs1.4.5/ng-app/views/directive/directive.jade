@@ -1,0 +1,27 @@
+extends ../layout
+block content
+  .app-header
+    h1 Angular-Directive
+  .my-app(ng-app='' ng-init='quantity=1;cost=1')
+    h2 
+      u ng-model
+    br
+    .form-group  
+      label Apple :
+      input.form-control(type='number' ng-model='quantity')
+    .form-group
+      label Cost :
+      input.form-control(type='number' ng-model='cost')
+    h3 Total : {{quantity*cost}}
+    
+    h2
+      u ng-repeat
+      br 
+     .repeat(ng-init="array=['Ada', 'Code', 'I/O', 'EOM', 'MEAN']")
+        br
+        p Init data : {{array}}        
+        .checkbox(ng-repeat='x in array')  
+          label
+            input(type='checkbox' value="{{x}}" aria-label="...")
+            {{x}}
+    

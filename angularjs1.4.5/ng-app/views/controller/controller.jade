@@ -1,0 +1,35 @@
+extends ../layout
+block content
+  .app-header
+    h1 Angular-Controller
+  .my-app(ng-app='controllerApp' ng-controller='showcaseCtrl')
+    h2 Controller
+    p set $scope.data as objects array and display data as table
+    br
+    .form-group
+      label Search
+      input.form-control(type='text' ng-model='search')
+    table.table.table-hover
+      tr
+        th Name
+        th Likes
+        th Up-like
+        th Panels
+      tr(ng-repeat="x in data | orderBy: 'name' | filter:search")
+        td {{x.name}}
+        td {{x.likes}}   
+        td 
+          button.btn.btn-info(type='button' ng-click='upLike(x)') Like
+        td
+          button.btn.btn-danger(type='button' ng-click='delete(x)')
+            span.glyphicon.glyphicon-remove(aria-hidden='true')
+    hr    
+    form(ng-submit='addData()')
+      .form-group
+        label Name
+        input.form-control(type='text' ng-model='name')
+      .form-group
+        label How many likes?
+        input.form-control(type='number' ng-model='likes')
+      button.btn.btn-success(type='submit') Add Data
+          

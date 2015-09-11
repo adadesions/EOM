@@ -1,0 +1,36 @@
+extends ../layout
+block content
+  .app-header
+    h1 Angular-Expressions
+  .my-app(ng-app='' ng-init="length=10;width=10;firstname='Ada';lastname='Kaminkure';points=[1,2,3,4,5];")    
+    h3 
+      b Number Expression
+    p 
+      | 2000 + 15 : 
+      b {{ 2000+15 }}
+      br
+      | 2558 - 543 : 
+      b {{ 2558 - 543 }}
+      br
+      | 2015 x 2558 : 
+      b {{ 2015*2558 }}
+      br
+      | 2558/2015 : 
+      b {{ 2558/2015 }}
+      
+    h3
+      b ng-inti, variable
+    .my
+      p Length = Width = 
+        b {{length}}
+      p This square area is: 
+        b {{ length*width }}
+    
+    h3
+      b String and Object
+    .string(ng-init="student={id:'0001', name:'Ada', surname:'Code'}")
+      p My name is {{firstname+' '+lastname}}
+      p Student Object is {{'ID:'+student.id +' Name:'+student.name +' Surname:'+student.surname}}
+      p {{student}}
+        
+        
