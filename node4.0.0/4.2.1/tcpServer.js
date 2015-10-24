@@ -15,10 +15,9 @@ var server = net.createServer({allowHalfOpen: true}, function (socket) {
   })
 
   socket.on('end', function() {
-    console.log('client disconnected');
-    client.destroy();
+    console.log('client disconnected');    
   });
-  
+
 });
 
 server.listen(7000, "localhost");

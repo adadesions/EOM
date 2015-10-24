@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Ng-App Test</title>
+    <script src="/angular/angular.min.js" charset="utf-8"></script>
+    <script src="/xyz/ngController.js" charset="utf-8"></script>
+  </head>
+  <body ng-app='eomApp' ng-controller='xyzCtrl' ng-init="name='YaYo!';k=12">
+      <h1>{{ name }}</h1>
+      <h3>{{5+3+2+k}}</h3>
+      TEST : <input ng-model="test" type="text" name="some_name" value="" >
+      <br>
+      Result : <h2>{{test}}</h2>
+
+      <h1>ng-repeat</h1>
+      <div id="repeat" ng-init="array=[1,2,3,4,5]">
+        <ul>
+          <li ng-repeat="value in array">
+            {{value}}
+          </li>
+        </ul>
+      </div>
+
+      <h1>From xyzController : {{luckyNumber}}</h1>
+      <div id="abc" ng-controller="abcCtrl">
+          <h1>From abcController : {{love}}</h1>
+      </div>      
+
+  </body>
+</html>

@@ -62,3 +62,8 @@ let data = [1,2,3,4,5],
 let m = 100
 while(m --> 19)
   console.log(m)
+
+//calback function
+// var model = data.find( x => x==1, function (arguments) {
+//
+// })
