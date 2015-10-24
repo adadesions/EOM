@@ -1,7 +1,7 @@
 //Popular joining word style
 // camelCase
 let adaCode = '.io',
-    firstname = 'Ada',
+    firstName = 'Ada',
     luckyNumber = '23',
     configDb = 'mongoDB'
 

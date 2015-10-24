@@ -23,10 +23,10 @@ let factorial = function fac(n) { return n<2 ? 1 : n*fac(n-1) }
 let f = 3,
     n = 13
 
-console.log(`Area of ${n}*${n} = ${n*n}`)
+console.log(`Area of ${n}*${n} = ${squareArea(n)}`)
 console.log(`Factorial ${f}! = ${factorial(f)}`)
 
-console.log('===================================Pass Function through parameter========================================')
+console.log('===================================Higher Order Function========================================')
 
 function map(fn, data){
   let result = []
@@ -35,6 +35,7 @@ function map(fn, data){
   }
   return result
 }
+
 {
   let data = [2,4,6,8,10],
       newData = map(function(x){ return x*x }, data)
@@ -57,7 +58,7 @@ let data = [1,2,3,4,5],
 
 
 
-//Special
-// let m = 100
-// while(m --> 19)
-//   console.log(m)
+// Special
+let m = 100
+while(m --> 19)
+  console.log(m)

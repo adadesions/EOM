@@ -29,6 +29,6 @@
       y = '13',
       z = 'AdaCode.io'
 
-  console.log(x+y)
+  console.log(x-y)
   console.log(x+z+y)
 }

@@ -10,16 +10,17 @@ var courseName = "Experience of MEAN - The first Gen!",
 
 //Block of let
 {
-  let courseCode = "EOM#1"
+  let courseCode = "EOM#3"
   console.log(courseCode)
 }
 console.log(courseCode)
 
 //Scoping idea
+let x = 10
 function fn(){
-  var x = 10
+  let y = 11
   if(x>=10){
-    let y = 11
+    y = 11
   }
   return y
 }
