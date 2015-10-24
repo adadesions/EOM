@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    title Ng1.4.7
+    link(rel="stylesheet", href="/bootstrap/dist/css/bootstrap.css")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    
+    script(src="/angular/angular.min.js")
+    script(src="/angular-ui-router/release/angular-ui-router.min.js")
+    script(src="/ngApp.js") 
+    
+  body( ng-app="routerApp")
+    nav.navbar.navbar-inverse.navbar-fixed-top.navbar-ada
+      .container-fluid
+        .navbar-header.dropdown
+          button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#ada-navbar" aria-expanded="false")
+            span.sr-only Toggle navigator
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(ui-sref="home") 
+            p NG1.4.7
+          
+        #ada-navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li(ng-class="{active: isActive('/')}")
+              a(ui-sref="home") 
+                span.glyphicon.glyphicon-home  Home
+            li(ng-class="{active: isActive('/courses/all')}")
+              a(ui-sref="courses") 
+                span.glyphicon.glyphicon-education  Courses
+            li(ng-class="{active: isActive('/report')}")
+              a(ui-sref="report") 
+                span.glyphicon.glyphicon-comment  Reports
+            li(ng-class="{active: isActive('/about')}")
+              a(ui-sref="about") 
+                span.glyphicon.glyphicon-blackboard  AboutUs
+          
+          ul.nav.navbar-nav.navbar-right.hidden-xs          
+            a(href="#") 
+              button(type="button").btn.btn-success                  
+                span(aria-hidden="true").glyphicon.glyphicon-globe
+                |  sign in
+
+    block content
