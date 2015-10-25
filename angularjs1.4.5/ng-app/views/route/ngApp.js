@@ -54,7 +54,6 @@ ngApp.controller('ngView3Controller', function($scope) {
 
 ngApp.controller('navbarController', function($scope, $location) {
     $scope.isActive = function(myLocation) {
-        var active = (myLocation === $location.path());
-        return active;
+        return (myLocation === $location.path());
     }
 });
